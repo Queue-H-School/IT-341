@@ -2,6 +2,12 @@
 __pycache__/
 *.py[codz]
 *$py.class
+/.idea
+
+# course info that doesn't need to be public
+/Course-Overview.md
+# protect assignment integrity
+/Labs
 
 # C extensions
 *.so
