@@ -8,11 +8,11 @@
 \- Max FF:FF:FF:FF</br>
 
 <u>IPv6 Addresses</u></br>
-\- 4 *hexbits*: 129 bits</br>
+\- 4 *hexbits*: 128 bits</br>
 \- written in hex (ex: B:F9:9023:F01:F342:324A::1000)</br>
 \- Max FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF</br>
 
-<u>Network and Host Portions</u></br>
+<u>Network and Host Portions</u></br>p
 \- Depends on the subnet mask (no way to tell which is which without it)
 
 <u>Subnet Mask</u></br>
@@ -24,12 +24,12 @@ Ex: 1111 1111 1111 0000 or 1111 0000 0000 0000</br>
 <u>Prefix Length</u></br>
 \- indicates the length of the subnet mask</br>
 \- prefix of 30 indicates 30 bits of ones for subnet mask</br>
-\- notation is \<ip address\>/X
-\- subnet mask cannot be longer than the ip address
+\- notation is \<ip address\>/X</br>
+\- subnet mask cannot be longer than the ip address</br>
 
 **Example: Prefix length of 30**</br>
-255.255.255.252  
-1111 1111 1111 1111 1111 1111 1111 1100
+255.255.255.252  </br>
+1111 1111 1111 1111 1111 1111 1111 1100</br>
 
 ### IP Assignment ###
 
@@ -45,15 +45,15 @@ Ex: 1111 1111 1111 0000 or 1111 0000 0000 0000</br>
 \- 192.168.0.0/16</br>
 
 <u>Link-Local:</u></br>
-\- self-assigned addresses</br>
-\- commonly known at Automatic Private IP Addressing (APIPA)
-\- used by Windows DCHP if DCHP fails
+\- self-assigned addresses (169.254.0.0/16)</br>
+\- commonly known at Automatic Private IP Addressing (APIPA)</br>
+\- used by Windows DCHP if DCHP fails</br>
 
 <u>Legacy RFC 790 (1981)</u></br>
 IPv4 address classes (very wasteful)</br>
-**Class A (000-127) (GE, but took it back)</br> (most networks, least hosts)</br>
-Class B (128-191) (balanced)</br>
-Class C (192-233) (least networks, most hosts)**</br>
+**Class A (000-127/8) (GE, but took it back) (most networks, least hosts)</br>
+Class B (128-191/16) (balanced)</br>
+Class C (192-233/24) (least networks, most hosts)**</br>
 Class D (224-239) multicasting</br>
 Class E (240-255) reserved (nobody cares, don't neet to know)</br>
 
@@ -78,13 +78,13 @@ Class E (240-255) reserved (nobody cares, don't neet to know)</br>
 <u>Network Addresses Translation (NAT)</u></br>
 \- typically enabled on the edge router connecting to the internet</br>
 
-<u>Network Segmentation</u>
-\- mostly boradcasts or multicasts
-\- switches propagate, router stops
-\- broadcasts are only propagated within a specific domain (that is controlled by a single router interface)
+<u>Network Segmentation</u></br>
+\- mostly broadcasts or multicasts</br>
+\- switches propagate, router stops</br>
+\- broadcasts are only propagated within a specific domain (that is controlled by a single router interface)</br>
 
 <u>Large Broadcast Domain Problems</u></br>
-\- hosts can generate excessive broadcasts and negatively affect the network
-\- so, reduce size of network domain (subnetting)
-ex: divide 172.16.0.0./16 into 172.16.0.0/24 and 172.16.1.0/24 (200 users each)
-\- divide by location, function, or device type
+\- hosts can generate excessive broadcasts and negatively affect the network</br>
+\- so, reduce size of network domain (subnetting)</br>
+ex: divide 172.16.0.0./16 into 172.16.0.0/24 and 172.16.1.0/24 (200 users each)</br>
+\- divide by location, function, or device type</br>

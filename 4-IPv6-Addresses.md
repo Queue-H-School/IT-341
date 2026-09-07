@@ -9,7 +9,7 @@
 \- Translation: Network Address Translation 64 (NAT64) enable IPv6 devices to communicate with IPv4 devices similar to NAT for IPv4</br>
 *these are only stopgaps, the goal should be native IPv6 communication*</br>
 
-<u>Formatting</u>
+<u>Formatting</u></br>
 \- 128 bits in an address (called a hextet)</br>
 \- 8 sets of four hex values (separated by :)</br>
 \- drop leading zeroes</br>
@@ -42,7 +42,7 @@ Anycast: 1 unicast address can be assigned to multiple devices</br>
 \- traffic is one-hop</br>
 \- local to a router</br>
 \- routers can have multiple LLA (can be the same, somehow)</br>
-\- fe80::/10 range
+\- fe80::/10 range</br>
 
 <u>Unique Local Addresses</u></br>
 *range c00::/7 to fdff::/7*</br>
@@ -60,11 +60,11 @@ Anycast: 1 unicast address can be assigned to multiple devices</br>
 ### IPv6 Multicast ###
 
 <u>Common Groups</u>
-\- All-nodes group: all devices join
-\- All-routers: only routers (auto-joined with enabled with `ipv6 unicast-routing` global config command)
+\- All-nodes group: all devices join</br>
+\- All-routers: only routers (auto-joined with enabled with `ipv6 unicast-routing` global config command)</br>
 **Multicast is the key to IPv6:** auto-joins "all nodes" and "all routers" groups</br>
 
 <u>Solicited Node</u></br>
-\- similar to all nodes
-\- mapped to special ethernet multicast address
-\- the ethernet NIC (network interface card) filters traffic by examining the dest mac address to see if the device is the intended target of the packet
+\- similar to all nodes</br>
+\- mapped to special ethernet multicast address</br>
+\- the ethernet NIC (network interface card) filters traffic by examining the dest mac address to see if the device is the intended target of the packet</br>
