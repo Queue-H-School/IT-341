@@ -54,7 +54,7 @@ Anycast: 1 unicast address can be assigned to multiple devices</br>
 
 <u>IPv6 Global Unicast Addresses (GUAs)</u></br>
 \- globally unique and routable on the IPv6 internet</br>
-\- only start with 001 or 2000::/3</br>
+\- /3 prefix (2000::/3)</br>
 \- begin with a decimal of 2 or 3</br>
 
 ### IPv6 Multicast ###
