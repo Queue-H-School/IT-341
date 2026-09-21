@@ -58,8 +58,9 @@ Anycast: 1 unicast address can be assigned to multiple devices</br>
 \- begin with a decimal of 2 or 3</br>
 
 ### IPv6 Multicast ###
+*a multicast group consists of receivers wanting to receive a particular data stream*</br>
 
-<u>Common Groups</u>
+<u>Common Groups</u></br>
 \- All-nodes group: all devices join</br>
 \- All-routers: only routers (auto-joined with enabled with `ipv6 unicast-routing` global config command)</br>
 **Multicast is the key to IPv6:** auto-joins "all nodes" and "all routers" groups</br>

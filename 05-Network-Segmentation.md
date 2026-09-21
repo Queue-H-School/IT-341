@@ -57,5 +57,5 @@ broadcast: 192.168.1.31</br>
 <u>Variable Length Subnet Mask (VLSM)</u></br>
 *Subnetting a subnet*</br>
 
-![08fig40.jpg](08fig40.jpg)
+![08fig40.jpg](images/08fig40.jpg)</br>
 Academy, C., & Cisco Networking Academy Program,  author. (2013). Network Basics Companion Guide / Academy, Cisco. (1st edition). Cisco Press.

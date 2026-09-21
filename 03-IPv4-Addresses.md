@@ -70,10 +70,15 @@ Class E (240-255) reserved (nobody cares, don't neet to know)</br>
 ### Types of IPv4 'Cast ###
 
 **Unicast**: one to one transmission</br>
+\- can be destination or source
 **Broadcast**: sends packet to all other hosts (all ones host address)</br>
 \- broadcasting is still unique to the network</br>
+\- only a destination address
 **Multicast**: sends packet to an address that multiple devices can recieve</br>
 \- can be in multiple multicast groups</br>
+\- only a destination address
+\- Class D
+\- always starts with 224
 
 <u>Network Addresses Translation (NAT)</u></br>
 \- typically enabled on the edge router connecting to the internet</br>
