@@ -62,7 +62,7 @@ Full duplex $\rightarrow$ transmit and receive on shared medium (Ethernet switch
 \- each node has its own time on the medium</br>
 \- used on ARCNET and Token Ring</br>
 
-## Datalink Frame ##</br>
+## Datalink Frame ##
 <u>Part 1: Header</u></br>
 \- Frame Start: announces beginning of frame</br>
 \- Addressing: source and dest nodes</br>
