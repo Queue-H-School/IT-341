@@ -1,95 +1,95 @@
 # OSI 1: Physical Layer #
 
-*Transports bits between network*</br>
-Last step in encapsulation: the bits are encoded and transmitted between devices</br>
-\- connection can be wired or wireless</br>
+*Transports bits between network*
+Last step in encapsulation: the bits are encoded and transmitted between devices
+\- connection can be wired or wireless
 
-<u>Standards</u></br>
-\- ISO, IEEE, ANSI</br>
-\- Physical components, encoding, signaling</br>
-*NIC is a key component*</br>
+<u>Standards</u>
+\- ISO, IEEE, ANSI
+\- Physical components, encoding, signaling
+*NIC is a key component*
 
-<u>Encoding</u></br>
-\- predicatable patterns that can be interpreted</br>
-\- no voltage may be incorrectly interpreted as a string of zeroes</br>
-\- constrained by bandwidth</br>
+<u>Encoding</u>
+\- predicatable patterns that can be interpreted
+\- no voltage may be incorrectly interpreted as a string of zeroes
+\- constrained by bandwidth
 
-<u>Terminology</u></br>
-Latency: data transfer time (including processing delays)</br>
-Throughput: measure of bits received over time (including overhead)</br>
-Goodput: measure of usable data received over time</br>
-*Goodput = Throughput - traffic overhead*</br>
+<u>Terminology</u>
+Latency: data transfer time (including processing delays)
+Throughput: measure of bits received over time (including overhead)
+Goodput: measure of usable data received over time
+*Goodput = Throughput - traffic overhead*
 
 ### Copper Cabling ###
-10Mb/s - 40Gb/s</br>
+10Mb/s - 40Gb/s
 
-<u>Copper Cable</u></br>
-\- most common: cheap and easy</br>
-\- low attenuation (weak over long time)</br>
-\- interference from EM, RF, and crosstalk</br>
-\- pay attention to cable length limits and use proper cable type</br>
-*coaxial, (un)shielded twisted pair*</br>
+<u>Copper Cable</u>
+\- most common: cheap and easy
+\- low attenuation (weak over long time)
+\- interference from EM, RF, and crosstalk
+\- pay attention to cable length limits and use proper cable type
+*coaxial, (un)shielded twisted pair*
 
-<u>Unshielded Twisted Pair (UTP) Cable</u></br>
-\- polarity cancels and the twisting changes to eliminate crosstalk</br>
-\- different categories (3, 5(e), 6(a), 7, 8) can carry better bandwidths</br>
+<u>Unshielded Twisted Pair (UTP) Cable</u>
+\- polarity cancels and the twisting changes to eliminate crosstalk
+\- different categories (3, 5(e), 6(a), 7, 8) can carry better bandwidths
 
-<u>Shielded Twisted Pair</u></br>
-\- wires (and pairs of wires) have insulation to protect against crosstalk</br>
-\- better interference protection</br>
-\- more expensive</br>
-\- harder to install</br>
+<u>Shielded Twisted Pair</u>
+\- wires (and pairs of wires) have insulation to protect against crosstalk
+\- better interference protection
+\- more expensive
+\- harder to install
 
-<u>Coaxial Cable</u></br>
-\- single large copper wire (well shielded)</br>
-\- woven copper braid or foil acts as a second wire and acts as a shield</br>
-\- usually used for internet and cable connections</br>
+<u>Coaxial Cable</u>
+\- single large copper wire (well shielded)
+\- woven copper braid or foil acts as a second wire and acts as a shield
+\- usually used for internet and cable connections
 
-<u>Crossover Cable</u></br>
-*crossover vs straight-through doesn't matter as much--OS switches the pins programmatically*</br>
-\- host-to-host, switch-to-switch, router-to-router</br>
-\- pairs are switched</br>
+<u>Crossover Cable</u>
+*crossover vs straight-through doesn't matter as much--OS switches the pins programmatically*
+\- host-to-host, switch-to-switch, router-to-router
+\- pairs are switched
 
-<u>Ethernet Straight Through</u></br>
-\- Host to network</br>
-\- no pins are switched</br>
+<u>Ethernet Straight Through</u>
+\- Host to network
+\- no pins are switched
 
-<u>Rollover</u></br>
-\- Console to router</br>
-\- Cisco proprietary</br>
-\- pins are inverted</br>
+<u>Rollover</u>
+\- Console to router
+\- Cisco proprietary
+\- pins are inverted
 
 ### Fiber Optic ###
-10 Mb/s - 800 Gb/s</br>
+10 Mb/s - 800 Gb/s
 
-<u>Fiber Optic</u></br>
-\- light transmits across very clear glass</br>
-\- no EMI or EFI</br>
-\- some dispersion, but can transmit long-distance</br>
-\- expensive, specialized</br>
-\- encoded through laser or LED (laser is expensive)</br>
+<u>Fiber Optic</u>
+\- light transmits across very clear glass
+\- no EMI or EFI
+\- some dispersion, but can transmit long-distance
+\- expensive, specialized
+\- encoded through laser or LED (laser is expensive)
 
-<u>Single Mode</u></br>
-\- laser</br>
-\- single beam (small core)</br>
-\- long-distance</br>
-\- typically yellow</br>
+<u>Single Mode</u>
+\- laser
+\- single beam (small core)
+\- long-distance
+\- typically yellow
 
-<u>Multimode</u></br>
-\- LEDs</br>
-\- larger core (light is transmitted at different angles)</br>
-\- short distance</br>
-\- typically orange</br>
+<u>Multimode</u>
+\- LEDs
+\- larger core (light is transmitted at different angles)
+\- short distance
+\- typically orange
 
-<u>Suscriber Connector (SC)</u></br>
-\- one-way only</br>
-\- half-duplex</br>
-\- identical (trial and error)</br>
+<u>Suscriber Connector (SC)</u>
+\- one-way only
+\- half-duplex
+\- identical (trial and error)
 *connector is not modal-specific*
 
 ### Wireless ###
-2 Mb/s - 46 Gb/s</br>
-\- coverage is dependent on physical environment</br>
-\- susceptible to (un)intentional interference </br>
-\- half-duplex: when multiple users access WLAN, all experience reduced bandwidth</br>
-\- requires access point and NIC adapters</br>
+2 Mb/s - 46 Gb/s
+\- coverage is dependent on physical environment
+\- susceptible to (un)intentional interference 
+\- half-duplex: when multiple users access WLAN, all experience reduced bandwidth
+\- requires access point and NIC adapters

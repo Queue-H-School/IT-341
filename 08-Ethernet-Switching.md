@@ -1,68 +1,68 @@
 # Ethernet Switching
 
-Ethernet operates in the data link layer and the physical layer</br>
-\- defined in the IEEE 802 standards</br>
+Ethernet operates in the data link layer and the physical layer
+\- defined in the IEEE 802 standards
 
-<u>Ethernet Frame Fields</u></br>
-\- 8 bytes: Preamble and SFD (added at the physical layer)</br>
-\- 6 bytes: Dest MAC address</br>
-\- 6 bytes: Source MAC address</br>
-\- 2 bytes: Type/length</br>
-\- 46-1500 bytes: Data</br>
-\- 4 bytes: Checksum</br>
+<u>Ethernet Frame Fields</u>
+\- 8 bytes: Preamble and SFD (added at the physical layer)
+\- 6 bytes: Dest MAC address
+\- 6 bytes: Source MAC address
+\- 2 bytes: Type/length
+\- 46-1500 bytes: Data
+\- 4 bytes: Checksum
 
-**Minimum 64 bytes** (collision detection) $\rightarrow$ Anything less is a runt and dropped</br>
-**Max 1518 bytes** (memory management) $\rightarrow$ Anything more is giant and (can be) error frame</br>
+**Minimum 64 bytes** (collision detection) $\rightarrow$ Anything less is a runt and dropped
+**Max 1518 bytes** (memory management) $\rightarrow$ Anything more is giant and (can be) error frame
 
 ## MAC Addresses ##
-*Every MAC address is globally unique*</br>
-\- can be programmatically spoofed</br>
+*Every MAC address is globally unique*
+\- can be programmatically spoofed
 
-<u>MAC Address Assignment</u></br>
-\- Organizationally Unique Identifier (OUI): 24 bits</br>
-\- Vendor Assigned: 24 bits</br>
+<u>MAC Address Assignment</u>
+\- Organizationally Unique Identifier (OUI): 24 bits
+\- Vendor Assigned: 24 bits
 
-<u>NIC Processing</u></br>
-\- NIC receives Ethernet frame</br>
-\- if dest address matches device address (in RAM), frame is passed up the layers for de-encapsulation</br>
-\- otherwise, device discards frame</br>
+<u>NIC Processing</u>
+\- NIC receives Ethernet frame
+\- if dest address matches device address (in RAM), frame is passed up the layers for de-encapsulation
+\- otherwise, device discards frame
 
-_BUM (broadcast, unicast, multicast)_</br>
+_BUM (broadcast, unicast, multicast)_
 
-<u>Unicast MAC Address</u></br>
-\- Standard MAC address (globally unique)</br>
-\- identified and matched with IP via ARP</br>
-\- source address in frame is always unicast</br>
+<u>Unicast MAC Address</u>
+\- Standard MAC address (globally unique)
+\- identified and matched with IP via ARP
+\- source address in frame is always unicast
 
 (STUDY these!!!)
-<u>Broadcast MAC Address</u></br>
-\- received and processed by every device on the Ethernet LAN</br>
-\- dest broadcast MAC address is FF-FF-FF-FF-FF-FF</br>
-\- not forwarded by a router</br>
-\- if the encapsulated data is an IPv4 broadcast, then all host on the local network will receive and process the packet</br>
+<u>Broadcast MAC Address</u>
+\- received and processed by every device on the Ethernet LAN
+\- dest broadcast MAC address is FF-FF-FF-FF-FF-FF
+\- not forwarded by a router
+\- if the encapsulated data is an IPv4 broadcast, then all host on the local network will receive and process the packet
 
-<u>Multicast MAC Address</u></br>
-IPv4 address $\rightarrow$ 01-00-5E</br>
-IPv6 address $\rightarrow$ 01-00-33-33</br>
-\- flooded out to all switch ports (except source port)</br>
-\- not forwarded by the router (unless otherwise configured)</br>
-\- used as a destination packet only</br>
+<u>Multicast MAC Address</u>
+IPv4 address $\rightarrow$ 01-00-5E
+IPv6 address $\rightarrow$ 01-00-33-33
+\- flooded out to all switch ports (except source port)
+\- not forwarded by the router (unless otherwise configured)
+\- used as a destination packet only
 
-<u>Unknown Unicast Flooding</u></br>
+<u>Unknown Unicast Flooding</u>
 
 ## MAC Address Table
-\- Switches learn based on source address of the Ethernet frame</br>
-\- hubs are dumb and don't learn anything</br>
+\- Switches learn based on source address of the Ethernet frame
+\- hubs are dumb and don't learn anything
 
-<u>Content Addressable Memory (CAM)</u></br>
-\- switches match ports and IP addresses based on the source address</br>
-\- adds source (mac, port, time to live) to MAC table</br>
-\- unicast forwarding (looks at table first to avoid flooding)</br>
-_if broadcast or multicast, flood to all ports except where it came from_</br>
+<u>Content Addressable Memory (CAM)</u>
+\- switches match ports and IP addresses based on the source address
+\- adds source (mac, port, time to live) to MAC table
+\- unicast forwarding (looks at table first to avoid flooding)
+_if broadcast or multicast, flood to all ports except where it came from_
 
-<u>Unknown Unicast Flooding</u></br>
-\- if the dest address is not in CAM, switch floods to all ports except source</br>
-\- even goes to known ports in case they are attached to a switch (multiple IPs can come from the same port)</br>
+<u>Unknown Unicast Flooding</u>
+\- if the dest address is not in CAM, switch floods to all ports except source
+\- even goes to known ports in case they are attached to a switch (multiple IPs can come from the same port)
 
 ## Forwarding ##
 <u>Store and Forward Switching</u>
@@ -78,6 +78,6 @@ _if broadcast or multicast, flood to all ports except where it came from_</br>
 \- read dest and immediately start forwarding
 \- can lead to forwarding error frames
 
-<u>Fragment-Free Switching</u></br>
+<u>Fragment-Free Switching</u>
 \- recieve the first 64 bytes (gaurantee not a runt)
 \- then foward
