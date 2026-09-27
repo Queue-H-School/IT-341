@@ -7,14 +7,14 @@
 \- Dual stack: devices run bother IPv4 and IPv6 protocols simultaneously  
 \- Tunneling: transporting and IPv6 packet over IPv4 network (IPv6 is encapsulated inside IPv4)  
 \- Translation: Network Address Translation 64 (NAT64) enable IPv6 devices to communicate with IPv4 devices similar to NAT for IPv4  
-*these are only stopgaps, the goal should be native IPv6 communication*
+*these are only stopgaps; the goal should be native IPv6 communication, but, in reality, IPv4 is very practical for most internal use*
 
 <u>Formatting</u>  
 \- 128 bits in an address (called a hextet)  
 \- 8 sets of four hex values (separated by :)  
 \- drop leading zeroes  
 \- double colons should only happen once  
-ex: 2001:0db8:0000:1111:0000:0000:0000:0200 → 2001:db8:0:1111::200
+Ex: 2001:0db8:0000:1111:0000:0000:0000:0200 → 2001:db8:0:1111::200
 
 <u>IPv6 Prefixes</u>  
 \- can be as many as /128  

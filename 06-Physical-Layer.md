@@ -20,7 +20,7 @@ Throughput: measure of bits received over time (including overhead)
 Goodput: measure of usable data received over time  
 *Goodput = Throughput - traffic overhead*
 
-### Copper Cabling ###
+## Copper Cabling ##
 10Mb/s - 40Gb/s
 
 <u>Copper Cable</u>  
@@ -59,7 +59,7 @@ Goodput: measure of usable data received over time
 \- Cisco proprietary  
 \- pins are inverted
 
-### Fiber Optic ###
+## Fiber Optic ##
 10 Mb/s - 800 Gb/s
 
 <u>Fiber Optic</u>  
@@ -87,7 +87,7 @@ Goodput: measure of usable data received over time
 \- identical (trial and error)  
 *connector is not modal-specific*
 
-### Wireless ###
+## Wireless ##
 2 Mb/s - 46 Gb/s  
 \- coverage is dependent on physical environment  
 \- susceptible to (un)intentional interference  

@@ -33,29 +33,33 @@ Ex: 192.168.1.0/24 $\rightarrow$ 192.168.1.0/26 = add 4 new networks
 /24 255.255.255.0
 
 Example: 10.0.0.0/8  
-\- use 10.0.0.0/16 as network segmentation (can use 10.0-255.0.0/16 as network segments)  
-broadcast: 10.0.255.255 is subnet broadcast
+\- use 10.0.0.0/16 as network segmentation  
+ **Broadcast**: 10.0.255.255  
+ **First host**: 10.0.0.1  
+ **Last host**: 10.0.255.254
 
 <u>Magic Number</u>  
 \- value of last bit of network prefix in subnet  
 \- last octet of networks will be multiple of it
 
 <u>Example: 192.168.1.0/27</u>  
-first valid host: 192.168.1.1  
-last valid host: 192.168.1.30  
-broadcast: 192.168.1.31
+**Broadcast**: 192.168.1.31  
+**First host**: 192.168.1.1  
+**Last host**: 192.168.1.30
 
 <u>Example: 192.168.1.0/24</u>  
 *want 2 hosts per subnetwork*  
-\- 2 valid hosts + 2 invalid ips = 4 (2 bit)  
-\- prefix of 30  
+\- 2 valid hosts + 2 invalid IPs = 4 (2 bit)  
+\- prefix of 30 (or /252)  
 \- add 64 subnetworks  
-\- subnet mask is 192.168.1.252
-
+\- subnet mask is 255.255.255.252  
 *Be able to identify the first valid host, last valid host, broadcast, and network*
 
 <u>Variable Length Subnet Mask (VLSM)</u>  
-*Subnetting a subnet*
-
+*Subnetting a subnet*  
+\- one (sub)network gets split into further subnets to better allocate IP space  
+[This is a good resource](https://compsci.rocks/learn/networking/vlsm-practice/)  
 ![08fig40.jpg](images/08fig40.jpg)  
-Academy, C., & Cisco Networking Academy Program,  author. (2013). Network Basics Companion Guide / Academy, Cisco. (1st edition). Cisco Press.
+[^1]
+
+[^1]: Academy, C., & Cisco Networking Academy Program,  author. (2013). Network Basics Companion Guide / Academy, Cisco. (1st edition). Cisco Press.

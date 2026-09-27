@@ -34,7 +34,6 @@ _BUM (broadcast, unicast, multicast)_
 \- identified and matched with IP via ARP  
 \- source address in frame is always unicast
 
-(STUDY these!!!)  
 <u>Broadcast MAC Address</u>  
 \- received and processed by every device on the Ethernet LAN  
 \- dest broadcast MAC address is FF-FF-FF-FF-FF-FF  
@@ -47,9 +46,6 @@ IPv6 address $\rightarrow$ 01-00-33-33
 \- flooded out to all switch ports (except source port)  
 \- not forwarded by the router (unless otherwise configured)  
 \- used as a destination packet only
-
-<u>Unknown Unicast Flooding</u>
-
 ## MAC Address Table
 \- Switches learn based on source address of the Ethernet frame  
 \- hubs are dumb and don't learn anything

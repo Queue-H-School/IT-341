@@ -1,5 +1,4 @@
 # OSI 4: Transport Layer
-
 \- segmenting and reassembling data  
 \- adds leader info  
 \- manage conversations
@@ -32,7 +31,6 @@
 \- set time and rate limits to prevent predicatable DDOS patterns
 
 <u>Session Termination</u>
-
 1. client sends FIN
 2. server sends ACK and FIN
 3. client sends ACK

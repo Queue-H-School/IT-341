@@ -11,12 +11,11 @@
 **Logical Link Control (LLC)** $\rightarrow$ communicates between networking software (upper layers) and device hardware (lower layers)  
 **Media Access Control (MAC)** $\rightarrow$ responsible for data encapsulation and media access control
 
-</u>Router Layer 2 Functions</u>  
+<u>Router Layer 2 Functions</u>  
 \- accepts a frame from the network medium  
 \- de-encapsulates and parses the data  
 \- re-encapsulates  
 \- forwards it to appropriate next segment
-
 ## Common WAN Topologies ##
 <u>Point-to-point</u>  
 \- simplest and most common wan topology  
@@ -32,8 +31,8 @@
 \- number of connections between $n$ points $= \large \frac{n(n-1)}{2}$
 
 <u>Former Topologies</u>  
-\- Bus: systems chained together linearly and terminated at each end  
-\- Ring: Bus but the two ends connect
+Bus: systems chained together linearly and terminated at each end  
+Ring: Bus but the two ends connect
 
 ## Carrier Sense Multiple Access (CSMA) ##
 

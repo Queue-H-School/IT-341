@@ -16,7 +16,8 @@
 \- Depends on the subnet mask (no way to tell which is which without it)
 
 <u>Subnet Mask</u>  
-\- Subnet mask & IPv4 = network portion **double check this**  
+\- Subnet mask & IPv4 = network portion  
+Ex: 192.168.30.154 & /24 = 192.168.30.0  
 \- Set of ones, then a set of zeroes (just determines length of host portion)  
 \- Fills greatest to least  
 Ex: 1111 1111 1111 0000 or 1111 0000 0000 0000
@@ -29,17 +30,20 @@ Ex: 1111 1111 1111 0000 or 1111 0000 0000 0000
 
 **Example: Prefix length of 30**  
 255.255.255.252  
-1111 1111 1111 1111 1111 1111 1111 1100
+1111 1111 1111 1111 1111 1111 1111 1100  
+**Example: Prefix Length of 24**  
+255.255.255.0  
+1111 1111 1111 1111 1111 1111 0000 0000
 
-### IP Assignment ###
+## IP Assignment ##
 
 <u>Reserved host addresses</u>  
 \- host addresses cannot be all zeroes or all ones  
 \- all ones is the broadcast address
 
 <u>RFC 1918: private IP addresses</u>  
-*internal use, no restrictions*  
-*no internet routing*  
+**internal use, no restrictions  
+no internet routing**  
 \- 10.0.0.0/8  
 \- 172.16.0.0/12  
 \- 192.168.0.0/16
@@ -62,12 +66,11 @@ Class E (240-255) reserved (nobody cares, don't neet to know)
 \- RIRs are responsible for allocating IP addresses to ISPs  
 \- ISPs provide address blocks to smaller ISPs and organizations
 
-
-<u>Loopback:</u>  
+<u>Loopback</u>  
 \- 127.0.0.0/8 (mostly just 127.0.0.1)  
 \- used to test if TCP/IP works
 
-### Types of IPv4 'Cast ###
+## Types of IPv4 'Cast ##
 
 **Unicast**: one to one transmission  
 \- can be destination or source  

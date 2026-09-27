@@ -19,7 +19,7 @@ Network Interface Card: Connects a device to the network
 Port/Interface: A specific endpoint within a device
 
 PAN (personal) \-\-> **LAN (local) \-\-> WAN (wide, provided by ISPs)** \-\-> MAN (metropolitan)  
-*Reachability from anywhere to everywhere*
+\- Reachability from anywhere to everywhere
 
 <u>Request for Comments</u> (RFC) are made by  
 \- Internet Engineering TF (IETF)  
@@ -40,7 +40,7 @@ PAN (personal) \-\-> **LAN (local) \-\-> WAN (wide, provided by ISPs)** \-\-> MA
 \- Ethernet WAN: really extentsive LAN  
 \- Dedicated Leased Line: reserved circuits within the ISP to privately connect distant offices
 
-**\*THE CONVERGENCE\***
+**\<-- THE CONVERGENCE --\>**
 
 <u>Fault tolerant</u>  
 \- limits the number of affected devices after a failure  
