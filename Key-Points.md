@@ -122,7 +122,6 @@ Academy, C., & Cisco Networking Academy Program,  author. (2013). Network Basics
 \- otherwise, device discards frame
 
 ### MAC Addresses ###
-
 <u>Multicast MAC Address</u>  
 IPv4 address $\rightarrow$ 01-00-5E  
 IPv6 address $\rightarrow$ 01-00-33-33  
@@ -151,5 +150,20 @@ _if broadcast or multicast, flood to all ports except where it came from_
 **A** (000-127/8) (GE, but took it back) (most networks, least hosts)  
 **B** (128-191/16) (balanced)  
 **C** (192-233/24) (least networks, most hosts)**  
-**D** (224-239) multicasting  
-**E** (240-255) reserved (nobody cares, don't neet to know)
+**D** (224-239/24) multicasting  
+**E** (240-255/24) reserved (nobody cares, don't neet to know)
+
+### Midterm 1 Review
+Detailed ARP (router replies broadcast request, unicast reply)  
+Routers do not forward broadcast  
+know console/vty vs interface  
+Checksum CRC  
+What is PDU  
+Layer 2 source and dest change  
+Layer 3 dest never changes  
+Layer 2 switch needs an IP for remote management  
+Switch forward (cut through and store and forward)  
+know udp and tcp protocols  
+link-local, loopback, experimental, etc address types  
+worm v virus  
+multicast mac/ip relationship
