@@ -8,19 +8,16 @@
 \- Max FF:FF:FF:FF
 
 <u>IPv6 Addresses</u>  
-\- 4 *hexbits*: 128 bits  
+\- 4 hexbits: 128 bits  
 \- written in hex (ex: B:F9:9023:F01:F342:324A::1000)  
 \- Max FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF
 
-<u>Network and Host Portions</u>p  
-\- Depends on the subnet mask (no way to tell which is which without it)
-
 <u>Subnet Mask</u>  
-\- Subnet mask & IPv4 = network portion  
+\- Subnet mask & IP = network portion  
 Ex: 192.168.30.154 & /24 = 192.168.30.0  
 \- Set of ones, then a set of zeroes (just determines length of host portion)  
 \- Fills greatest to least  
-Ex: 1111 1111 1111 0000 or 1111 0000 0000 0000
+Ex: 1111 1111 1111 1111 1111 1111 0000 0000 (/24)
 
 <u>Prefix Length</u>  
 \- indicates the length of the subnet mask  
@@ -38,8 +35,8 @@ Ex: 1111 1111 1111 0000 or 1111 0000 0000 0000
 ## IP Assignment ##
 
 <u>Reserved host addresses</u>  
-\- host addresses cannot be all zeroes or all ones  
-\- all ones is the broadcast address
+all zeroes: network address  
+all ones: broadcast address
 
 <u>RFC 1918: private IP addresses</u>  
 **internal use, no restrictions  
@@ -77,11 +74,11 @@ Class E (240-255) reserved (nobody cares, don't neet to know)
 **Broadcast**: sends packet to all other hosts (all ones host address)  
 \- broadcasting is still unique to the network  
 \- only a destination address  
+\- routers do not propagate  
 **Multicast**: sends packet to an address that multiple devices can recieve  
 \- can be in multiple multicast groups  
 \- only a destination address  
-\- Class D  
-\- always starts with 224
+\- Class D: 224-239
 
 <u>Network Addresses Translation (NAT)</u>  
 \- typically enabled on the edge router connecting to the internet

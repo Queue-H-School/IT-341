@@ -1,6 +1,5 @@
 # Ethernet Switching
-
-Ethernet operates in the data link layer and the physical layer  
+\- Ethernet operates in the data link layer and the physical layer  
 \- defined in the IEEE 802 standards
 
 <u>Ethernet Frame Fields</u>  

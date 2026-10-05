@@ -1,4 +1,4 @@
-# Lecture 2: Basic Switch and End Device Configuration
+# Lecture 2: Basic Device Configuration
 
 <u>Machine Architecture</u>  
 \- User interaction on GUI \-\-> Kernel interprets to machine code \-\-> Hardware reacts  
@@ -39,9 +39,9 @@
 <u>Command Synax</u>  
 **commands and keywords entered literally**  
 *arguments for which you supply values*  
-[optional element]  
+\[optional element\]  
 {required element}  
-[requires x {choose y | or z}]  
+\[requires x {choose y | or z}\]  
 <u></u>  
 *conf for configure*
 
@@ -70,6 +70,6 @@
 `# copy running-config startup-config` saves running-config to start-up config  
 `# erase startup-config` erases startup\-config (resets to factory settings)
 
-<u>Export Setting to .txt</u>  
+<u>Save Settings</u>  
 1. In terminal emulator, assign name and file location to save log file  
 2. `# show running-config` or `# show startup-config` to send settings to log file

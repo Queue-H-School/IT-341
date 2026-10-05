@@ -1,13 +1,13 @@
 # OSI 1: Physical Layer #
 
 *Transports bits between network*  
-Last step in encapsulation: the bits are encoded and transmitted between devices  
+\- Last step in encapsulation $\rightarrow$ the bits are encoded and transmitted between devices  
 \- connection can be wired or wireless
 
 <u>Standards</u>  
 \- ISO, IEEE, ANSI  
 \- Physical components, encoding, signaling  
-*NIC is a key component*
+\- NIC is a key component
 
 <u>Encoding</u>  
 \- predicatable patterns that can be interpreted  
@@ -21,9 +21,7 @@ Goodput: measure of usable data received over time
 *Goodput = Throughput - traffic overhead*
 
 ## Copper Cabling ##
-10Mb/s - 40Gb/s
-
-<u>Copper Cable</u>  
+10Mb/s - 40Gb/s  
 \- most common: cheap and easy  
 \- low attenuation (weak over long time)  
 \- interference from EM, RF, and crosstalk  

@@ -31,7 +31,7 @@
 \- manipulation/theft of data  
 \- system access or admin access  
 \- brute force password  
-\- dictionary attack ??  
+\- dictionary attack  
 \- trust exploitation  
 \- port redirection  
 \- man-in-the-middle (intercepted packets)
@@ -54,7 +54,7 @@
 \- updating and patching is critical  
 \- upgrading can create new vulnerabilities
 
-## AAA: Authentication, Authorization, Accounting
+### AAA: Authentication, Authorization, Accounting
 \- access control  
 \- useful in large networks
 
@@ -72,7 +72,7 @@
 \- timestamp, userid, actions  
 \- like github in developing
 
-## Firewalls
+### Firewalls
 \- authorization  
 \- on both end devices and servers  
 \- devices outside the firewall "outside the DMZ" and are isolated from the rest of the system
@@ -101,10 +101,10 @@
 \- automates basic default security policies  
 \- username and password specifications  
 \- port filtering  
-\- blocks consecutive failed attempts (bruteforce, dictionary)
+\- blocks consecutive failed attempts (brute force, dictionary)
 
 <u>Disable Unused Ports/Devices</u>  
-\- unneeded ports and unnattended devices are vulnerabilities  
+\- unneeded ports and unattended devices are vulnerabilities  
 \- networks should be incredibly minimal
-## Enable SSH
+### Enable SSH
 \- encrypted remote session (telnet is plaintext)

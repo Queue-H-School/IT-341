@@ -4,7 +4,6 @@
 \- manage conversations
 
 ## Transmission Control Protocol (TCP)
-
 <u>Connection Oriented</u>  
 \- sequencing, acknowledgement, retransmission  
 \- flow rate control  
@@ -42,7 +41,7 @@ PSH $\rightarrow$ request immediate data delivery to receiving host, without wai
 RST $\rightarrow$ reset (terminate session immediately without fin-ack process)  
 SYN $\rightarrow$ sequence number (packet sent)  
 FIN $\rightarrow$ connection termination  
-CHK $\rightarrow$ checksum  
+CHK $\rightarrow$ checksum (CRC)  
 SEQ $\rightarrow$ sequence number
 
 <u>(Old) ACK</u>  
@@ -51,7 +50,7 @@ SEQ $\rightarrow$ sequence number
 
 <u>SACK</u>  
 \- if both hosts support SACK, reduces redundant retransmission  
-\- Selective acknowledgement allows for the retransmission of *just* the dropped packet(s)
+\- Selective acknowledgement allows for the retransmission of just the dropped packet(s)
 
 <u>Maximum Segment Size (MSS)</u>  
 At Layer 2: TCP and IPv4 headers reduce MSS to 1460  
@@ -62,7 +61,6 @@ At Layer 2: TCP and IPv4 headers reduce MSS to 1460
 \- different algorithms
 
 ## User Datagram Protocol (UDP)
-
 <u>Connectionless</u>  
 \- best-effort  
 \- no reliability or acknowledgement  
@@ -75,14 +73,23 @@ At Layer 2: TCP and IPv4 headers reduce MSS to 1460
 \- length $\rightarrow$ length of the header
 
 ## Port Numbers
-
 ![socket-pairs.png](images/socket-pairs.png)  
 <u>Socket Pairs</u>  
-\- source port number is randomly generated bc it doesn't matter  
+*only one application can be listening on a port at a time*  
+\- source port number is randomly generated because it doesn't matter  
 \- dest port matches application protocol  
-*IP + port = socket*  
+\- IP + port = socket  
 \- sockets are unique (hosts will not generate a duplicate source port)  
 \- sockets allow for multiple processes on the same client or host to distinguish themselves
 
-![well-known-ports.jpg](images/well-known-ports.jpg)  
-only one application can be listening on a port at a time
+### Well-Known Ports
+80: HTTP  
+443: HTTPS  
+20: FTP data  
+21: FTP control  
+53: DNS  
+25: SMTP  
+110: POP2  
+143: IMAP  
+23: Telnet  
+22: SSH  

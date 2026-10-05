@@ -10,8 +10,8 @@
 \- excessive broadcasts can overrun a network
 
 <u>Network bits cannot be changed</u>  
-Ex: 10.0.0.0/8 $\rightarrow$ network is 10  
-Ex: 10.0.0.0/16 $\rightarrow$ network is 10.0.0
+Ex: 10.0.0.0/8 $\rightarrow$ network is 10 and host is 0.0.0  
+Ex: 10.0.0.0/16 $\rightarrow$ network is 10.0.0 and host is 0
 
 <u>Valid Hosts</u>  
 \- $2^h - 2$ ($h =$ number of host bits)  
@@ -53,7 +53,6 @@ Example: 10.0.0.0/8
 \- prefix of 30 (or /252)  
 \- add 64 subnetworks  
 \- subnet mask is 255.255.255.252  
-*Be able to identify the first valid host, last valid host, broadcast, and network*
 
 <u>Variable Length Subnet Mask (VLSM)</u>  
 *Subnetting a subnet*  

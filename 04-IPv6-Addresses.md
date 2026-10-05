@@ -17,7 +17,7 @@
 Ex: 2001:0db8:0000:1111:0000:0000:0000:0200 → 2001:db8:0:1111::200
 
 <u>IPv6 Prefixes</u>  
-\- can be as many as /128  
+\- up to /128  
 \- reccomended to use a 64-bit interface id makes Stateless address autoconfig (SLAAC) and subnetting easier
 
 <u>IPv6 Casting</u>  
@@ -58,7 +58,7 @@ Anycast: 1 unicast address can be assigned to multiple devices
 \- begin with a decimal of 2 or 3
 
 ### IPv6 Multicast ###
-*a multicast group consists of receivers wanting to receive a particular data stream*
+\- a multicast group consists of receivers wanting to receive a particular data stream
 
 <u>Common Groups</u>  
 \- All-nodes group: all devices join  
