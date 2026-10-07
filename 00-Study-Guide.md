@@ -4,61 +4,78 @@
 
 ### Address Types
 
-#### Public  
-<u>IPv6 Global Unicast Addresses (GUAs)</u>  
-\- globally unique and routable on the IPv6 internet  
-\- /3 prefix (2000::/3)  
-<u>Global Unique Addresses</u>  
-\- equivalent to an IPv4 public address  
-\- required for internet access  
-\- no NAT needed
+<u>Classful</u>  
+**Class A** (000-127/8) (GE, but took it back) (most networks, least hosts)  
+**Class B** (128-191/16) (balanced)  
+**Class C** (192-233/24) (least networks, most hosts)  
+**Class D** (224-239) multicasting  
+**Class E** (240-255) reserved (nobody cares, don't neet to know)
 
-#### Private
+<u>IPv4 Broadcast</u>  
+\- one-to-all  
+\- can cause flooding  
+\- used by ARP and switch forwarding  
+==host bits are set to ones==
 
-Experimental
-
-<u>Unique Local Addresses</u>  
-\- similar to private IPv4 addresses  
-\- used for addressing within a site or group of sites  
-\- can be used for devices that will never need to access another network  
-\- not globally routed or translated to a global IPv4 address  
-*many sites use these as a security measure, which is not what ULAs were designed for*
-
-<u>Loopback</u>  
-\- call to host machine  
-\- used to test if TCP/IP works
-
-<u>Link-Local</u> ????  
-\- commonly known at Automatic Private IP Addressing (APIPA)  
-\- used by Windows DCHP if DCHP fails
-
-<u>Link-Local Addresses (LLA)</u>  
-\- traffic is one-hop  
-\- local to a router  
-\- routers can have multiple LLA (can be the same, somehow)  
-#### Casting
-More in depth at [Github Gist](https://gist.github.com/MangaD/be346bf566e70773e2836c4a4a0bef6d)
-
-<u>Anycast</u>  
-\- one-to-nearest communication (IPv6 only)  
+<u>IPv6 Anycast</u>  
+\- one-to-nearest communication  
 \- data is sent to the topologically closest node among a group  
 \- standard unicast addresses are assigned to multiple devices  
-\- unicast with multiple dests
+\- unicast with multiple dests  
+==host bits are set to ones==
 
-<u>Broadcast</u>  
-\- one-to-all (IPv4 only)  
-\- floods the network
+<u>IPv4 Experimental</u>  
+\- Class E  
+\- not used publicly  
+==240.0.0.0/4==
 
+<u>IPv6 Reserved</u>  
+Default Route $\rightarrow$ ::/0  
+Unspecified Address $\rightarrow$ ::/128  
+#### Common Types
 <u>Unicast</u>  
 \- 1-1 communication  
 \- unique (either locally or globally)
 
-##### Multicast
+<u>Public</u>  
+\- required for internet access  
+\- GUA (IPv6) does not need a NAT  
+==1.0.0.0/8 to 223.0.0.0/8== (except private, loopback)  
+==2000::/3== (which can also look like 2001::/3)
+
+<u>Private</u>  
+\- local only--not internet routable  
+\- used for addressing within a site or group of sites  
+\- can be used for devices that will never need to access another network  
+\- (IPv6) not globally routed or translated to a global IPv4 address  
+\- many sites use ULAs as a security measure, which is not what ULAs were designed for  
+==10.0.0.0/8, 172.16.0.0.0/12, 192.168.0.0/16==  
+==FC00::/7== (may also show up as FD00::/7)
+
+<u>Loopback</u>  
+\- call to host machine  
+\- used to test if TCP/IP works  
+==127.0.0.0/8== and ==::1/128==
+
+<u>Link-Local Addresses (LLA)</u>  
+\- traffic is one-hop  
+\- local to a router  
+\- used only for neighbor discovery and next hop configuration  
+\- (IPv4) assigned when no IP address is DHCP or statically defined (APIPA)  
+==169.254.0.0/16==  
+==FE80::/10==
+
+#### Multicasting
+<u>IPv4 Multicast</u>  
 \- one-to-many or many-to-many communication  
 \- source can send data to a group of interested recipients without duplication at the source  
 \- routers replicate packets only as needed  
 \- dynamic grouping (hosts can leave and join as needed)  
-\- **Type D: 224-239**
+==224-239==
+
+<u>IPv6 Multicast</u>  
+\- superset of link-local, a couple of other types of  
+==FF00::/8== 
 
 <u>IPv6 Multicast All Groups</u>  
 \- All-nodes group: all devices join  
@@ -69,27 +86,6 @@ More in depth at [Github Gist](https://gist.github.com/MangaD/be346bf566e70773e2
 \- similar to all nodes  
 \- mapped to special ethernet multicast address  
 \- the ethernet NIC filters traffic by examining the dest mac address to see if the device is the intended target of the packet
-
-### Ranges
-<u>Classful</u>  
-Class A (000-127/8) (GE, but took it back) (most networks, least hosts)  
-Class B (128-191/16) (balanced)  
-Class C (192-233/24) (least networks, most hosts)*  
-Class D (224-239) multicasting  
-Class E (240-255) reserved (nobody cares, don't neet to know)
-
-<u>Private Addresses</u>   
-\- 10.0.0.0/8  
-\- 172.16.0.0/12  
-\- 192.168.0.0/16
-
-Link-Local: (169.254.0.0/16)  
-Loopback: 127.0.0.0/8 (mostly just 127.0.0.1)  
-
-Global Unique Addresses  
-Link-Local: fe80::/10 range  
-ULA: c00::/7-fdff::/7  
-GUA: 2000::/3
 ## OSI Model ##
 [This video helps](https://www.youtube.com/watch?v=3kfO61Mensg)  
 All People Seem To Need Data Processing  
@@ -99,8 +95,21 @@ All People Seem To Need Data Processing
 **Bits**  
 \- last step in encapsulation  
 \- the bits are encoded and transmitted between devices  
-\- connection can be wired or wireless
+\- connection can be wired or wireless  
 
+<u>Crossover Cable</u>  
+*crossover vs straight-through doesn't matter as much--OS switches the pins programmatically*  
+\- host-to-host, switch-to-switch, router-to-router  
+\- pairs are switched
+
+<u>Ethernet Straight Through</u>  
+\- Host to network  
+\- no pins are switched
+
+<u>Rollover</u>  
+\- Console to router  
+\- Cisco proprietary  
+\- pins are inverted
 ### 2. Data Link Layer ###
 **Frames**  
 \- accepts a frame from the network medium  
@@ -117,7 +126,7 @@ All People Seem To Need Data Processing
 \- frame delimiting and recognition  
 \- protection against errors, generally by means of generating and checking FCS  
 \- control of access to the physical transmission medium  
-\- receive/transmit normal frames  (CSMA)  
+\- receive/transmit normal frames (CSMA)  
 \- half-duplex retransmission and backoff functions  
 \- discard malformed frames
 
@@ -127,11 +136,13 @@ All People Seem To Need Data Processing
 \- Vendor Assigned: 24 bits
 
 <u>Multicast MAC Address</u>  
-IPv4 address $\rightarrow$ 01-00-5E  
-IPv6 address $\rightarrow$ 01-00-33-33  
+\- dest only  
+\- based on multicast ip address  
+IPv4 address $\rightarrow$ ==01-00-5E== (append last 23 bits of ip)  
+\- 32 multicast mac to 1 multicast ipv4  
+IPv6 address $\rightarrow$ ==33-33== (append last 32 bits of ip)  
 \- flooded out to all switch ports (except source port)  
 \- not forwarded by the router (unless otherwise configured)  
-\- used as a destination packet only
 
 <u>Content Addressable Memory (CAM)</u>  
 \- switches match ports and IP addresses based on the source address  
@@ -154,6 +165,31 @@ IPv6 address $\rightarrow$ 01-00-33-33
 \- NIC receives Ethernet frame  
 \- if dest address matches device address (in RAM), frame is passed up the layers for de-encapsulation  
 \- otherwise, device discards frame
+
+#### Switch Forwarding
+\- switches need an IP addresses for remote management from console/VTY
+
+<u>Store and Forward Switching</u>  
+*slowest, most secure, most common*  
+\- computes CRC immediately after receiving the entire frame  
+\- if cyclic redundancy check (CRC) is valid, forward, otherwise drop  
+\- if frame is runt or giant, also drop  
+\- essential in case of encrypted frames  
+\- used in mixed-rate environments
+
+<u>Cut Through Switching</u>  
+\- forwarding before the entire frame is received  
+\- can lead to forwarding error frames
+
+<u>Fast Forward Switching</u>  
+*fastest*  
+\- read dest and immediately start forwarding  
+\- type of cut-through
+
+<u>Fragment-Free Switching</u>  
+*compromise*  
+\- receive the first 64 bytes (gaurantee not a runt), then forward  
+\- type of cut-through
 
 ### 3. Network Layer
 **Packets**
@@ -231,21 +267,13 @@ FTP:  control 21, data 20
 SMB: printing
 
 ## Well-Known Ports
-80: HTTP  
-443: HTTPS  
-20: FTP data  
-21: FTP control  
-53: DNS  
-25: SMTP  
-110: POP2  
-143: IMAP  
-23: Telnet  
-22: SSH  
-
-## Midterm 1 Review
-What is PDU  
-Layer 2 switch needs an IP for remote management  
-Switch forward (cut through and store and forward)  
-know udp and tcp protocols  
-link-local, loopback, experimental, etc address types  
-multicast mac/ip relationship
+**20**: FTP data  
+**21**: FTP control  
+**22**: SSH  
+**23**: Telnet  
+**25**: SMTP  
+**53**: DNS  
+**80**: HTTP  
+**110**: POP2  
+**143**: IMAP  
+**443**: HTTPS  
